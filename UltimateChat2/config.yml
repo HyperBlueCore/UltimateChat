@@ -1,0 +1,25 @@
+#  _    _ _ _   _                 _         ____ _           _   ___ #
+# | |  | | | | (_)               | |      / ____| |         | | |__ \ #
+# | |  | | | |_ _ _ __ ___   __ _| |_ ___| |    | |__   __ _| |_   ) | #
+# | |  | | | __| | '_ ` _ \ / _` | __/ _ \ |    | '_ \ / _` | __| / / #
+# | |__| | | |_| | | | | | | (_| | ||  __/ |____| | | | (_| | |_ / /_ #
+# \____/|_|\__|_|_| |_| |_|\__,_|\__\___|\_____|_| |_|\__,_|\__|____| #
+#  #
+# Made by Lertu #
+# Version v2.2.0 #
+#  #
+# Chat format: #
+# PlaceHolders! THERE IS ALSO PLACEHOLDERAPI SUPPORT! #
+# {player} - for playername #
+# {displayname} - for displayname {if using nicknames from other plugins} #
+# {prefix} - for prefix #
+# {suffix} - for suffix #
+# {msg} - for message #
+# {faction} - for player faction {Requires Factions} #
+# {legacyfaction} - for player faction {Legacy factions} #
+# & - for color codes such as &a = green #
+chatFormat: '{prefix}{displayname}{suffix}&7: &f{msg}'
+PlaceholderAPI: false
+BlockWords: false
+BlockedWords:
+ - 'BadWord'
