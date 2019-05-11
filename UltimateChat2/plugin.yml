@@ -1,8 +1,10 @@
-main: org.ultimatechat2.Main
-version: 2.2.0
+main: org.ultimatechat2.core.UltimateChatPlugin
+version: 2.2.1
 name: UltimateChat2
 softdepend: [PlaceholderAPI, Factions, LegacyFactions, LuckPerms, MassiveCore]
 depend: [Vault]
-authors: [Lertu]
+authors: [Lertu, PoKu]
 commands:
   ultimatechat:
+    description: help
+    usage: /<command>
