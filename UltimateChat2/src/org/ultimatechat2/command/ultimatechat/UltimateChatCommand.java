@@ -61,7 +61,7 @@ public class UltimateChatCommand extends CommandHandler {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase(getCommandName())
                 || hasAlias(label)) {
-            PermissionFunction.executeFunction(CommandPermission.INSTANCE, sender, new Object[] {label, args});
+            PermissionFunction.executeFunction(CommandPermission.INSTANCE, sender, new Object[] {this, label, args});
             return true;
         }
         return false;

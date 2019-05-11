@@ -125,10 +125,8 @@ public class UltimateChatPlugin extends JavaPlugin {
     }
 
     private boolean checkLibrary() {
-        String vaultName = configurationContainer.getConfiguration().getString(LibraryProtocol.VAULT_NAME);
-
         Plugin vaultPlugin;
-        if (vaultName != null && (vaultPlugin = Bukkit.getPluginManager().getPlugin(vaultName)) != null) {
+        if ((vaultPlugin = Bukkit.getPluginManager().getPlugin(LibraryProtocol.VAULT_NAME)) != null) {
             if (Bukkit.getPluginManager().isPluginEnabled(vaultPlugin)) {
                 RegisteredServiceProvider<Chat> chatProvider;
                 if ((chatProvider = getServer().getServicesManager().getRegistration(Chat.class)) != null)

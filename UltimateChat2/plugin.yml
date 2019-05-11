@@ -3,7 +3,7 @@ version: 2.2.1
 name: UltimateChat2
 softdepend: [PlaceholderAPI, Factions, LegacyFactions, LuckPerms, MassiveCore]
 depend: [Vault]
-authors: [Lertu]
+authors: [Lertu, PoKu]
 commands:
   ultimatechat:
     description: help

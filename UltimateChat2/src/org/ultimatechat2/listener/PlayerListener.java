@@ -112,12 +112,13 @@ public class PlayerListener implements Listener {
         final Player player = e.getPlayer();
 
         if (getServer().getPluginManager().isPluginEnabled(LibraryProtocol.VAULT_NAME)) {
-            String message = e.getMessage();
-            if (!(player.hasPermission("ultimateChat.colours")))
-                message = message.replaceAll(String.valueOf(ChatColor.COLOR_CHAR), "&");
-            e.setFormat(parseBlock(parseFormat(core.getConfigurationContainer().getConfiguration().getString(ConfigurationValue.CHAT_FORMAT.getPath()),
-                    player,
-                    message)));
+            String message = player.hasPermission("ultimateChat.colours")
+                    ? ChatColor.translateAlternateColorCodes('&', e.getMessage())
+                    : e.getMessage().replace(String.valueOf(ChatColor.COLOR_CHAR), "&");
+            e.setFormat(ChatColor.translateAlternateColorCodes('&',
+                    parseBlock(parseFormat(core.getConfigurationContainer().getConfiguration().getString(ConfigurationValue.CHAT_FORMAT.getPath()),
+                            player,
+                            message))));
         }
     }
 
